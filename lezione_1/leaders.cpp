@@ -2,6 +2,7 @@
  * then check in linear time if any of the element, starting
  * form right, is bigger than the maximum element met so far.
  */
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -14,13 +15,15 @@ int main(){
 		int n;
 		cin>>n;
 		vector<int> v(n);
+		list<int> print;
 		for(int j=0; j<n; j++) cin>>v[j];
 		int max=v[n-1];
 		for(int j=n-1; j>=0; j--) {
-			if(v[j]>=max) cout<<(max=v[j])<<" ";
+			if(v[j]>=max) print.push_front(max=v[j]);
 		}
+		for(list<int>::iterator it=print.begin(); it!=print.end(); it++) cout<<*it<<" ";
 		cout<<endl;
 	}
 	
-	return 0;
+return 0;
 }
