@@ -7,18 +7,18 @@
 
 using namespace std;
 
-int inversions(vector<int>& v){
-	int n=v.size();
+long inversions(vector<long>& v){
+	long n=v.size();
 	if(n<=1) return 0;
-	int counter=0;
-	int upper=0;
-	vector<int> l(v.begin(), v.begin()+n/2);
-	vector<int> u(v.begin()+n/2, v.end());
+	long counter=0;
+	long upper=0;
+	vector<long> l(v.begin(), v.begin()+n/2);
+	vector<long> u(v.begin()+n/2, v.end());
 	counter+=inversions(l);
 	counter+=inversions(u);
-	vector<int>::iterator il=l.begin();
-	vector<int>::iterator iu=u.begin();
-	vector<int>::iterator iv=v.begin();
+	vector<long>::iterator il=l.begin();
+	vector<long>::iterator iu=u.begin();
+	vector<long>::iterator iv=v.begin();
 	while(il!=l.end() || iu!=u.end()){
 		while(il!=l.end() && (iu==u.end() || *il<=*iu)){
 			*(iv++)=*(il++);
@@ -33,13 +33,13 @@ int inversions(vector<int>& v){
 }
 
 int main(){
-	int T;
+	long T;
 	cin>>T;
-	for(int i=0; i<T; i++){
-		int n;
+	for(long i=0; i<T; i++){
+		long n;
 		cin>>n;
-		vector<int> v(n);
-		for(int j=0; j<n; j++) cin>>v[j];
+		vector<long> v(n);
+		for(long j=0; j<n; j++) cin>>v[j];
 		cout<<inversions(v)<<endl;
 	}
 	
