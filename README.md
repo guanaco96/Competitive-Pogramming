@@ -1,2 +1,2 @@
 # Competitive-Pogramming
-This repository is devoted to homework evaluation
+This repository is devoted to homework evaluation.
