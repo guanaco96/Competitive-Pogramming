@@ -2,6 +2,7 @@
 * that is sufficient to determine the max k-width windows 
 * array since we can ignore elements having value & index
 * smaller than the current added value.
+* This code runs in linear time.
 */
 
 #include<bits/stdc++.h>
