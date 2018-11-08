@@ -2,6 +2,7 @@
  * to count the number of connected components
  * among languages used by somebody. Then it adds
  * 1 cost unit for each employee that knows no language.
+ * This algorithm runs in linear time.
  */
 
 #include<bits/stdc++.h>
