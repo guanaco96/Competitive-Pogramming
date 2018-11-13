@@ -1,7 +1,7 @@
 /* This is a standard implementation
- * of Kruscal algorithm, using a forest
- * data structure to support the union-
- * find part.
+ * of Kruscal algorithm using a forest
+ * data structure to support union-
+ * find queries.
  */
 
 #include<bits/stdc++.h>
@@ -16,11 +16,9 @@ struct edge{
 	int we;
 };
 
-struct comp{
-	bool operator()(const edge &e1, const edge &e2){
+bool comp(const edge &e1, const edge &e2){
 		return e1.we<e2.we;
-	}
-};
+}
 
 int ft[N];
 
@@ -43,7 +41,7 @@ int main(){
 	cin>>n>>m;
 	vector<edge> ed(m);
 	for(int i=0; i<m; i++) cin>>ed[i].st>>ed[i].en>>ed[i].we;
-	sort(ed.begin(), ed.end(), comp());
+	sort(ed.begin(), ed.end(), comp);
 	for(int i=0; i<n; i++) ft[i]=i;
 	ll sum=0;
 	for(vector<edge>::iterator it=ed.begin(); it!=ed.end(); it++){
