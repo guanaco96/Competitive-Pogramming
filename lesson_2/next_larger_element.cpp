@@ -3,13 +3,13 @@
  * allowing us to complete our task in linear time.
  */
 #include<bits/stdc++.h>
-
 using namespace std;
+typedef long long ll;
 
-vector<int> v, w;
-stack<int> s;
+vector<ll> v, w;
+stack<ll> s;
 
-void insert(int j){
+void insert(ll j){
 	while(!s.empty() && v[j]>v[s.top()]){
 		w[s.top()]=v[j];
 		s.pop();
@@ -25,19 +25,18 @@ void devoid(){
 }
 		
 int main(){
-	int T;
+	ll T;
 	cin>>T;
-	for(int i=0; i<T; i++){
-		int n;
+	for(ll i=0; i<T; i++){
+		ll n;
 		cin>>n;
 		v.resize(n);
 		w.resize(n);
-		for(int j=0; j<n; j++) cin>>v[j];
-		for(int j=0; j<n; j++) insert(j);
+		for(ll j=0; j<n; j++) cin>>v[j];
+		for(ll j=0; j<n; j++) insert(j);
 		devoid();
-		for(int j=0; j<n; j++) cout<<w[j]<<" ";
+		for(ll j=0; j<n; j++) cout<<w[j]<<" ";
 		cout<<endl;
 	}
-	
 return 0;
 }
