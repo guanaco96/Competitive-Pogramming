@@ -1,7 +1,7 @@
 '''
 It's straightforeward to notice that the number of 
 0-1 strings respecting problem's constraints is
-fib(n+1) then we use dynamic progrmmin to compute 'em.
+fib(n+1) then we use dynamic progrmming to compute 'em.
 ''' 
 n=input()
 tab={0:1, 1:1}
