@@ -4,6 +4,9 @@
  * reachable from each position and applying the 
  * greedy strategy that always choose to reach the
  * index i maximizing nx[i].
+ * REMARK: this code runs properly in a local environment 
+ * but fails on G4G (it does not print anything on certain
+ * inputs running finely on my laptop).
  */
 #include<bits/stdc++.h>
 #define dbg(x) cerr << #x  << ": " << x << endl;
