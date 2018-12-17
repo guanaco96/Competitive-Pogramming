@@ -3,6 +3,8 @@
  * of the prefix A[0..k-1] that is a substring of B.
  * Then executing KMP once more we can find the minimum number
  * of shifts needed, that are j iff A[1..k-1]==B[j..k+j-1].
+ * Since KMP runs in linear time and binary search executes KMP
+ * log(n) time it yelds a O(n log(n)) time complexity.
  */
 #include<bits/stdc++.h>
 #define dbg(x) cerr << #x  << ": " << x << endl;
