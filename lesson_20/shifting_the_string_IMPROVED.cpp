@@ -45,7 +45,7 @@ int main(){
 	while(l < n && shift < n) {
 		if(a[l] == b[(l + shift) % n]) {
 			l++;
-			if(mx < l){
+			if(mx < l) {
 				mx = l;
 				argmx = shift;
 			}
